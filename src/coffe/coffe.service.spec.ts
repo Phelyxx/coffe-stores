@@ -59,7 +59,6 @@ describe('CoffeService', () => {
     expect(storedCoffe.price).toEqual(newCoffe.price)
   });
 
-
   it('create should throw an exception for an invalid coffe', async () => {
     let coffe: CoffeEntity = coffesList[0];
     coffe = {

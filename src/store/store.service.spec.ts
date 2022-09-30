@@ -60,7 +60,6 @@ describe('StoreService', () => {
     expect(storedStore.phone).toEqual(newStore.phone)
   });
 
- 
   it('create should throw an exception for an invalid store', async () => {
     let store: StoreEntity = storesList[0];
     store = {
@@ -68,4 +67,5 @@ describe('StoreService', () => {
     }
     await expect(() => service.createStore(store)).rejects.toHaveProperty("message", "The phone number must be of 10 characters")
   });
+  
 });
